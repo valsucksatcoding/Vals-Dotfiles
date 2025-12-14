@@ -1,0 +1,93 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+palette = "colors"
+
+format = """
+[](color1)\
+[ 󰣇 ](bg:color1 fg:color2)\
+$username\
+[](bg:color3 fg:color1)\
+$directory\
+[](fg:color3 bg:color3)\
+$git_branch\
+$git_status\
+[](fg:color3 bg:color4)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:color4 bg:color5)\
+$time\
+[ ](fg:color5)\
+\n$character"""
+
+[username]
+show_always = true
+style_user = "bg:color1 fg:color2"
+style_root = "bg:color1 fg:color2"
+format = '[ $user ]($style)'
+
+[character]
+format = '[ ❯ ](fg:color3)'
+
+
+[directory]
+style = "fg:color7 bg:color3"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+#optional symbol replacments ( i dont like them >:( )
+#[directory.substitutions]
+#"Documents" = " 󰈙 "
+#"Downloads" = "  "
+#"Music" = "  "
+#"Pictures" = "  "
+
+[git_branch]
+symbol = ""
+style = "bg:color3"
+format = '[[ $symbol $branch ](fg:color3 bg:color3)]($style)'
+
+[git_status]
+style = "bg:color3"
+format = '[[($all_status$ahead_behind )](fg:color3 bg:color3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:color5"
+format = '[[  $time ](fg:color3 bg:color5)]($style)'
+
+[palettes.colors]
+color1 = '#c1c1ff'
+color2 = '#2a2a60'
+color3 = '#c8c5d0'
+color4 = '#1f1f25'
+color5 = '#2a2a60'
+color6 = '#131318'
+color7 = '#131318'
+color8 = '#c1c1ff'
+color9 = '#e9b9d3'
