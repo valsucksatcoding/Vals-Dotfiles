@@ -1,0 +1,9 @@
+[config]
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship_matugen.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.niri]
+input_path = "~/.config/matugen/templates/niri_colors.kdl"
+output_path = "~/.config/niri/colors.kdl"

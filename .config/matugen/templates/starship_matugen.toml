@@ -1,0 +1,93 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+palette = "colors"
+
+format = """
+[](color1)\
+[ 󰣇 ](bg:color1 fg:color2)\
+$username\
+[](bg:color3 fg:color1)\
+$directory\
+[](fg:color3 bg:color3)\
+$git_branch\
+$git_status\
+[](fg:color3 bg:color4)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:color4 bg:color5)\
+$time\
+[ ](fg:color5)\
+\n$character"""
+
+[username]
+show_always = true
+style_user = "bg:color1 fg:color2"
+style_root = "bg:color1 fg:color2"
+format = '[ $user ]($style)'
+
+[character]
+format = '[ ❯ ](fg:color3)'
+
+
+[directory]
+style = "fg:color7 bg:color3"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+#optional symbol replacments ( i dont like them >:( )
+#[directory.substitutions]
+#"Documents" = " 󰈙 "
+#"Downloads" = "  "
+#"Music" = "  "
+#"Pictures" = "  "
+
+[git_branch]
+symbol = ""
+style = "bg:color3"
+format = '[[ $symbol $branch ](fg:color3 bg:color3)]($style)'
+
+[git_status]
+style = "bg:color3"
+format = '[[($all_status$ahead_behind )](fg:color3 bg:color3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color4"
+format = '[[ $symbol ($version) ](fg:color3 bg:color4)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:color5"
+format = '[[  $time ](fg:color3 bg:color5)]($style)'
+
+[palettes.colors]
+color1 = '{{colors.primary_fixed_dim.default.hex}}'
+color2 = '{{colors.on_primary.default.hex}}'
+color3 = '{{colors.on_surface_variant.default.hex}}'
+color4 = '{{colors.surface_container.default.hex}}'
+color5 = '{{colors.on_primary.default.hex}}'
+color6 = '{{colors.surface_dim.default.hex}}'
+color7 = '{{colors.surface.default.hex}}'
+color8 = '{{colors.primary.default.hex}}'
+color9 = '{{colors.tertiary.default.hex}}'

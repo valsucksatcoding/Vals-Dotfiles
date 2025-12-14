@@ -1,0 +1,8 @@
+layout {
+    border {
+        width 2
+        active-color   "{{ colors.primary.dark.hex }}"     
+        inactive-color "{{ colors.primary.light.hex }}"      
+        urgent-color   "{{ colors.error.default.hex }}"        
+    }
+}

@@ -1,0 +1,31 @@
+# vim:ft=kitty
+
+## name:     Catppuccin Kitty Mocha
+## author:   Catppuccin Org
+## license:  MIT
+## upstream: https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf
+## blurb:    Soothing pastel theme for the high-spirited!
+
+include colors.conf
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMono Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+enable_audio_bell no
+
+#cursor trail11
+cursor_trail 1
+cursor_trail_decay 0.1 0.4
+cursor_trail_start_threshold 0
+cursor_trail_color none
+
+background_opacity 0.6
+
+# OS Window titlebar colors
+wayland_titlebar_color system
+macos_titlebar_color system
+
+
+# END_KITTY_FONTS
